@@ -1,3 +1,52 @@
+CloudyGame Documentation
+-------------------------
+## Packaging Settings
+- Do not use PAK files
+- Use the shipping configuration
+
+## Configuration
+There are two important files in the /Config folder of the packaged game. This can be found in `SavedDirectory\WindowsNoEditor\ProjectName\Config`
+- DefaultGame.ini
+- DefaultGameUserSettings.ini
+
+### DefaultGame.ini
+Two lines are important when running the game:
+```
+MaxFPS=60
+NumOfPlayers=0
+```
+`MaxFPS` determines the highest FPS that the game can run at. This is for each individual player.
+
+`NumOfPlayers` determines the number of players (and windows) that the game will start with. Do note that this feature works in conjunction with the thin client, which sends signals to CloudyGamePlugin to add and remove additional players as necessary.
+
+### DefaultGameUserSettings.ini
+This file is not created by default. Create this on your own in the /Config folder in `SavedDirectory\WindowsNoEditor\ProjectName\Config`
+
+Place the following into the file:
+```
+[/Script/Engine.GameUserSettings]
+bUseVSync=False
+ResolutionSizeX=1280
+ResolutionSizeY=720
+LastUserConfirmedResolutionSizeX=1280
+LastUserConfirmedResolutionSizeY=1024
+WindowPosX=-1
+WindowPosY=-1
+bUseDesktopResolutionForFullscreen=False
+FullscreenMode=2
+LastConfirmedFullscreenMode=2
+Version=5
+```
+These are the important values to take note of:
+- ResolutionSizeX
+- ResolutionSizeY
+- FullscreenMode
+
+`ResolutionSizeX` and `ResolutionSizeY` are self explanatory. `FullscreenMode` determines whether the game runs in full screen or not. The possible settings are:
+- 0 (fullscreen) 
+- 1 (borderless fullscreen)(this ignores resolution settings in the file and uses your desktop's resolution)
+- 2 (windowed)
+
 Epic Survival Game Series
 -------------------------
 
