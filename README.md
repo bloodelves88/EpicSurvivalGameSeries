@@ -3,6 +3,7 @@ CloudyGame Documentation
 ## Packaging Settings
 - Do not use PAK files
 - Use the shipping configuration
+![packagingsettings](https://i.imgur.com/1gx7ct7.png)
 
 ## Configuration
 There are two important files in the /Config folder of the packaged game. This can be found in `SavedDirectory\WindowsNoEditor\ProjectName\Config`
